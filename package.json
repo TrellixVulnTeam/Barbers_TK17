@@ -1,0 +1,26 @@
+{
+  "name": "barbers",
+  "version": "1.0.0",
+  "description": "If You Don’t Look Good, We Don’t Look Good.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/civas3/Barbers.git"
+  },
+  "author": "civas3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/civas3/Barbers/issues"
+  },
+  "homepage": "https://github.com/civas3/Barbers#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.1",
+    "jquery": "^3.5.1"
+  }
+}

@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/*abstracts*/
+/*Functions allow you to define complex operations on SassScript values that you can re-use throughout 
+your stylesheet. They make it easy to abstract out common formulas and behaviors in a readable way.
+
+Functions are defined using the @function at-rule, which is written:
+ @function <name>(<arguments...>) { ... }. A function’s name can be any Sass identifier. 
+ It can only contain universal statements, as well as the @return at-rule which indicates the 
+ value to use as the result of the function call. Functions are called using the normal CSS 
+ function syntax.
+
+SCSS SYNTAX
+@function pow($base, $exponent) {
+  $result: 1;
+  @for $_ from 1 through $exponent {
+    $result: $result * $base;
+  }
+  @return $result;
+}
+
+.sidebar {
+  float: left;
+  margin-left: pow(4, 3) * 1px;
+}*/
+/*
+0 - 320px:      Smaller mobile phones
+320 - 360px:    Medium mobile phones
+360 - 480px:    Biger mobile phones
+480 - 768px:    Tablet portrait
+768 - 1024px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- s-phone
+- m-phone
+- b-phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/*base*/
+/*div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: myfirst 5s linear 2s infinite alternate;
+  }
+  */
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px; }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px; }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px; }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px; }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px; } }
+
+@keyframes arrow {
+  0% {
+    top: 40%; }
+  25% {
+    top: 42.5%; }
+  50% {
+    top: 40%; }
+  75% {
+    top: 42.5%; }
+  100% {
+    top: 40%; } }
+
+@keyframes arrowDown-itemOne {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.2;
+    background-color: #417B5A; } }
+
+@keyframes arrowDown-itemTwo {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.3;
+    background-color: #417B5A; } }
+
+@keyframes arrowDown-itemThree {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.4;
+    background-color: #417B5A; } }
+
+@keyframes arrowDown-itemFour {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.5;
+    background-color: #417B5A; } }
+
+@keyframes arrowDown-itemFive {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.8;
+    border-top: 5rem solid #417B5A; } }
+
+@keyframes heroButton {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    background-color: #417B5A; } }
+
+.sectionOne .come-in {
+  transform: translateY(150px);
+  animation: come-in 1s ease forwards; }
+
+.sectionOne .come-in:nth-child(odd) {
+  animation-duration: 0.8s; }
+
+.sectionOne .already-visible {
+  transform: translateY(0);
+  animation: none; }
+
+@keyframes come-in {
+  to {
+    transform: translateY(0); } }
+
+.hide-image {
+  visibility: hidden; }
+
+.fadeIn {
+  -webkit-animation: show-image 0.8s;
+  animation: show-image 0.8s;
+  visibility: visible !important; }
+
+@-webkit-keyframes show-image {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style-type: none; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif; }
+  @media only screen and (max-width: 20em) {
+    html {
+      font-size: 37.5%; } }
+  @media only screen and (max-width: 64em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  html body {
+    box-sizing: border-box; }
+
+/*“Web typography” refers to the appearance of all the text on your website. It includes basic 
+CSS text properties like what font to use and whether it should be italic or not, but typography 
+is much more than that. It’s about the space between and around letters, words, and lines. It’s 
+the size of different runs of text in relation to one another, and the history behind each font family.
+
+https://www.internetingishard.com/html-and-css/web-typography/
+*/
+/* !!!!___ Use % rather than px for all layout-related lenghts (including pictures) ___!!!! */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IM Fell English', serif;
+  text-transform: uppercase; }
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-bottom: 1rem; }
+
+/*Utility classes are meant to do only one thing, and do it well. They are designed to be simple,
+ composable and re-usable, allowing for easy and fast development. While a CSS system based on utility 
+ classes alone is not desirable, having a set of utility classes that allow you to quickly put together 
+ templates is great.
+
+ https://blog.mariano.io/css-utility-classes-how-to-use-them-effectively-d61ee00dad2d
+ 
+Common Use Cases
+*I find utility classes really helpful for:
+*Margin/padding
+*Text (colors, size, styles)
+*Common Background Colors
+*Hiding/Showing stuff
+*Display (block, inline-block)
+
+Naming utility classes
+To separate utility classes from component classes, it’s good to namespace them. I use the .u- namespace.
+You can also shorthand most properties for faster coding. Here are a couple I use:
+*p/m for margin/padding
+*t/r/l/b for top/right/left/bottom
+*v/h for vertical/horizontal
+*bg for background
+*/
+/*components*/
+/*layout*/
+/*pages*/
+nav {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  background-color: #417B5A;
+  margin-bottom: 10rem;
+  padding: 0.5rem 0;
+  border-bottom: solid 0.1rem #4B3F72; }
+  nav ul li {
+    margin: 0 1rem;
+    padding: 0 1.2rem; }
+    @media only screen and (max-width: 30em) {
+      nav ul li {
+        padding: 0 0.2rem; } }
+    nav ul li a:hover {
+      animation: ease-in;
+      transition-delay: 0.1s; }
+
+.hero-section .carousel-caption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw; }
+  @media only screen and (max-width: 30em) {
+    .hero-section .carousel-caption {
+      top: 35%;
+      width: 90vw; }
+      .hero-section .carousel-caption p:first-child {
+        margin-bottom: 37rem; } }
+    @media only screen and (max-width: 30em) and (max-width: 20em) {
+      .hero-section .carousel-caption p:first-child {
+        margin-bottom: 25rem; } }
+
+@media only screen and (max-width: 30em) {
+  .hero-section .carousel-item {
+    height: 100vh;
+    background-color: #000 !important; }
+    .hero-section .carousel-item img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); } }
+
+.hero-section .carousel-item:nth-child(5) .arrow-down {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+  animation-name: arrow;
+  animation-duration: 2s;
+  animation-delay: 4s; }
+  .hero-section .carousel-item:nth-child(5) .arrow-down div {
+    width: 2rem;
+    height: 5rem;
+    border: red solid 0.1rem;
+    margin: 1rem auto;
+    transition-property: opacity, background;
+    animation-fill-mode: forwards;
+    animation-duration: 1.3s;
+    opacity: 0; }
+    .hero-section .carousel-item:nth-child(5) .arrow-down div:first-child {
+      animation-delay: 1s;
+      animation-name: arrowDown-itemOne; }
+    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(2) {
+      animation-delay: 1.3s;
+      animation-name: arrowDown-itemTwo; }
+    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(3) {
+      animation-delay: 1.6s;
+      animation-name: arrowDown-itemThree; }
+    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(4) {
+      animation-delay: 1.9s;
+      animation-name: arrowDown-itemFour; }
+    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(5) {
+      width: 0;
+      height: 0;
+      border: none;
+      border-left: 2.5rem solid transparent;
+      border-right: 2.5rem solid transparent;
+      animation-delay: 2.2s;
+      animation-name: arrowDown-itemFive; }
+
+.hero-section .carousel-item:nth-child(5) a {
+  display: inline-block;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  border-radius: 3rem !important;
+  border: red solid 0.1rem;
+  opacity: 0;
+  animation-name: heroButton;
+  animation-delay: 2.8s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 2s; }
+  @media only screen and (max-width: 20em) {
+    .hero-section .carousel-item:nth-child(5) a {
+      bottom: 10%; } }
+  .hero-section .carousel-item:nth-child(5) a:hover {
+    transform: translate(-50%, -50%) rotateY(180deg); }
+
+.sectionOne {
+  margin: 25rem 0; }
+  .sectionOne .container {
+    margin-top: 15rem; }
+    .sectionOne .container .row {
+      display: flex;
+      align-items: center; }
+
+.sectionTwo .image-banner {
+  background-image: url(../images/sectionTwo/clearcut-forest.jpg); }
+
+.sectionThree {
+  margin: 25rem 0; }
+  .sectionThree h2 {
+    margin-bottom: 5rem; }
+  .sectionThree .bg-primary {
+    background-color: #ffffff !important; }
+  .sectionThree .card-body {
+    overflow-x: hidden;
+    border: none;
+    padding: 0;
+    border: #4B3F72 solid 0.1rem; }
+
+.sectionFour .image-banner {
+  background-image: url(../images/sectionFour/chopped-forest.jpg); }
+
+.sectionFive {
+  margin: 25rem 0; }
+  .sectionFive h2 {
+    margin: 3rem auto 3rem auto; }
+  .sectionFive .analogy {
+    margin: 5rem auto 2rem auto; }
+    .sectionFive .analogy span {
+      display: inline-block; }
+  .sectionFive .lead button {
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    background-color: #417B5A;
+    border: #4B3F72;
+    padding: 0.5rem 2rem; }
+    .sectionFive .lead button:hover {
+      background-color: #D0CEBA; }
+  .sectionFive .modal-content {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh; }
+    @media only screen and (max-width: 30em) {
+      .sectionFive .modal-content .youtube-video {
+        width: 100%;
+        min-height: 25rem;
+        height: auto; } }
+
+.sectionSix .image-banner {
+  background-image: url(../images/sectionSix/never.jpg); }
+
+.sectionSeven {
+  margin: 25rem 0; }
+  .sectionSeven h2 {
+    margin: 3rem auto 3rem auto; }
+  .sectionSeven iframe {
+    margin: 3rem auto 3rem auto;
+    padding-left: 3rem; }
+    @media only screen and (max-width: 30em) {
+      .sectionSeven iframe {
+        padding-left: 0; } }
+  .sectionSeven p {
+    margin: 3rem auto 3rem auto; }
+  .sectionSeven #accordionExample {
+    margin-top: 5rem; }
+    .sectionSeven #accordionExample iframe {
+      float: right; }
+      @media only screen and (max-width: 30em) {
+        .sectionSeven #accordionExample iframe {
+          float: none; } }
+    .sectionSeven #accordionExample .card-header {
+      background-color: #417B5A; }
+      .sectionSeven #accordionExample .card-header button {
+        width: 100%; }
+        .sectionSeven #accordionExample .card-header button:focus {
+          outline: none;
+          box-shadow: none; }
+
+.sectionEight .image-banner {
+  background-image: url(../images/sectionEight/pray.jpg); }
+
+.sectionNine {
+  margin: 25rem 0; }
+  .sectionNine h2, .sectionNine iframe {
+    margin: 3rem auto 3rem auto; }
+
+footer {
+  background-color: #417B5A;
+  padding: 5rem;
+  border-top: solid 0.1rem #4B3F72; }
+  footer .col-md-4 {
+    margin-bottom: 3rem; }
+  footer img {
+    width: 80%; }
+    @media only screen and (max-width: 30em) {
+      footer img {
+        width: 100%; } }
+  @media only screen and (max-width: 30em) {
+    footer ul {
+      margin-bottom: 2rem; } }
+  footer ul h6 {
+    position: relative; }
+    footer ul h6:after {
+      content: '';
+      width: 45%;
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      border-width: 0 0 0.2rem;
+      border-style: dashed; }
+  footer ul li {
+    list-style-type: disc;
+    padding: 0.4rem 0; }
+    footer ul li:nth-child(2) {
+      margin-top: 1.5rem; }
+      @media only screen and (max-width: 30em) {
+        footer ul li:nth-child(2) {
+          margin-top: 1rem; } }
