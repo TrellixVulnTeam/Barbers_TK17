@@ -86,77 +86,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   100% {
     top: 40%; } }
 
-@keyframes arrowDown-itemOne {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0.2;
-    background-color: #417B5A; } }
-
-@keyframes arrowDown-itemTwo {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0.3;
-    background-color: #417B5A; } }
-
-@keyframes arrowDown-itemThree {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0.4;
-    background-color: #417B5A; } }
-
-@keyframes arrowDown-itemFour {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0.5;
-    background-color: #417B5A; } }
-
-@keyframes arrowDown-itemFive {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0.8;
-    border-top: 5rem solid #417B5A; } }
-
-@keyframes heroButton {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1;
-    background-color: #417B5A; } }
-
-.sectionOne .come-in {
-  transform: translateY(150px);
-  animation: come-in 1s ease forwards; }
-
-.sectionOne .come-in:nth-child(odd) {
-  animation-duration: 0.8s; }
-
-.sectionOne .already-visible {
-  transform: translateY(0);
-  animation: none; }
-
-@keyframes come-in {
-  to {
-    transform: translateY(0); } }
-
-.hide-image {
-  visibility: hidden; }
-
-.fadeIn {
-  -webkit-animation: show-image 0.8s;
-  animation: show-image 0.8s;
-  visibility: visible !important; }
-
-@-webkit-keyframes show-image {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 *,
 *::after,
 *::before {
@@ -224,231 +153,38 @@ You can also shorthand most properties for faster coding. Here are a couple I us
 /*components*/
 /*layout*/
 /*pages*/
-nav {
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  background-color: #417B5A;
-  margin-bottom: 10rem;
-  padding: 0.5rem 0;
-  border-bottom: solid 0.1rem #4B3F72; }
-  nav ul li {
-    margin: 0 1rem;
-    padding: 0 1.2rem; }
-    @media only screen and (max-width: 30em) {
-      nav ul li {
-        padding: 0 0.2rem; } }
-    nav ul li a:hover {
-      animation: ease-in;
-      transition-delay: 0.1s; }
-
-.hero-section .carousel-caption {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw; }
-  @media only screen and (max-width: 30em) {
-    .hero-section .carousel-caption {
-      top: 35%;
-      width: 90vw; }
-      .hero-section .carousel-caption p:first-child {
-        margin-bottom: 37rem; } }
-    @media only screen and (max-width: 30em) and (max-width: 20em) {
-      .hero-section .carousel-caption p:first-child {
-        margin-bottom: 25rem; } }
-
-@media only screen and (max-width: 30em) {
-  .hero-section .carousel-item {
-    height: 100vh;
-    background-color: #000 !important; }
-    .hero-section .carousel-item img {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%); } }
-
-.hero-section .carousel-item:nth-child(5) .arrow-down {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
-  text-align: center;
-  animation-name: arrow;
-  animation-duration: 2s;
-  animation-delay: 4s; }
-  .hero-section .carousel-item:nth-child(5) .arrow-down div {
-    width: 2rem;
-    height: 5rem;
-    border: red solid 0.1rem;
-    margin: 1rem auto;
-    transition-property: opacity, background;
-    animation-fill-mode: forwards;
-    animation-duration: 1.3s;
-    opacity: 0; }
-    .hero-section .carousel-item:nth-child(5) .arrow-down div:first-child {
-      animation-delay: 1s;
-      animation-name: arrowDown-itemOne; }
-    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(2) {
-      animation-delay: 1.3s;
-      animation-name: arrowDown-itemTwo; }
-    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(3) {
-      animation-delay: 1.6s;
-      animation-name: arrowDown-itemThree; }
-    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(4) {
-      animation-delay: 1.9s;
-      animation-name: arrowDown-itemFour; }
-    .hero-section .carousel-item:nth-child(5) .arrow-down div:nth-child(5) {
-      width: 0;
-      height: 0;
-      border: none;
-      border-left: 2.5rem solid transparent;
-      border-right: 2.5rem solid transparent;
-      animation-delay: 2.2s;
-      animation-name: arrowDown-itemFive; }
-
-.hero-section .carousel-item:nth-child(5) a {
-  display: inline-block;
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1rem 2rem;
-  border-radius: 3rem !important;
-  border: red solid 0.1rem;
-  opacity: 0;
-  animation-name: heroButton;
-  animation-delay: 2.8s;
-  animation-fill-mode: forwards;
-  transition-property: transform;
-  transition-duration: 2s; }
-  @media only screen and (max-width: 20em) {
-    .hero-section .carousel-item:nth-child(5) a {
-      bottom: 10%; } }
-  .hero-section .carousel-item:nth-child(5) a:hover {
-    transform: translate(-50%, -50%) rotateY(180deg); }
-
-.sectionOne {
-  margin: 25rem 0; }
-  .sectionOne .container {
-    margin-top: 15rem; }
-    .sectionOne .container .row {
-      display: flex;
-      align-items: center; }
-
-.sectionTwo .image-banner {
-  background-image: url(../images/sectionTwo/clearcut-forest.jpg); }
-
-.sectionThree {
-  margin: 25rem 0; }
-  .sectionThree h2 {
-    margin-bottom: 5rem; }
-  .sectionThree .bg-primary {
-    background-color: #ffffff !important; }
-  .sectionThree .card-body {
-    overflow-x: hidden;
-    border: none;
-    padding: 0;
-    border: #4B3F72 solid 0.1rem; }
-
-.sectionFour .image-banner {
-  background-image: url(../images/sectionFour/chopped-forest.jpg); }
-
-.sectionFive {
-  margin: 25rem 0; }
-  .sectionFive h2 {
-    margin: 3rem auto 3rem auto; }
-  .sectionFive .analogy {
-    margin: 5rem auto 2rem auto; }
-    .sectionFive .analogy span {
-      display: inline-block; }
-  .sectionFive .lead button {
-    margin-top: 3rem;
-    border-radius: 0.5rem;
-    background-color: #417B5A;
-    border: #4B3F72;
-    padding: 0.5rem 2rem; }
-    .sectionFive .lead button:hover {
-      background-color: #D0CEBA; }
-  .sectionFive .modal-content {
-    margin-right: auto;
-    margin-left: auto;
+header {
+  background-color: #000; }
+  header .contact-info {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin-top: 20vh; }
-    @media only screen and (max-width: 30em) {
-      .sectionFive .modal-content .youtube-video {
-        width: 100%;
-        min-height: 25rem;
-        height: auto; } }
-
-.sectionSix .image-banner {
-  background-image: url(../images/sectionSix/never.jpg); }
-
-.sectionSeven {
-  margin: 25rem 0; }
-  .sectionSeven h2 {
-    margin: 3rem auto 3rem auto; }
-  .sectionSeven iframe {
-    margin: 3rem auto 3rem auto;
-    padding-left: 3rem; }
-    @media only screen and (max-width: 30em) {
-      .sectionSeven iframe {
-        padding-left: 0; } }
-  .sectionSeven p {
-    margin: 3rem auto 3rem auto; }
-  .sectionSeven #accordionExample {
-    margin-top: 5rem; }
-    .sectionSeven #accordionExample iframe {
-      float: right; }
-      @media only screen and (max-width: 30em) {
-        .sectionSeven #accordionExample iframe {
-          float: none; } }
-    .sectionSeven #accordionExample .card-header {
-      background-color: #417B5A; }
-      .sectionSeven #accordionExample .card-header button {
-        width: 100%; }
-        .sectionSeven #accordionExample .card-header button:focus {
-          outline: none;
-          box-shadow: none; }
-
-.sectionEight .image-banner {
-  background-image: url(../images/sectionEight/pray.jpg); }
-
-.sectionNine {
-  margin: 25rem 0; }
-  .sectionNine h2, .sectionNine iframe {
-    margin: 3rem auto 3rem auto; }
-
-footer {
-  background-color: #417B5A;
-  padding: 5rem;
-  border-top: solid 0.1rem #4B3F72; }
-  footer .col-md-4 {
-    margin-bottom: 3rem; }
-  footer img {
-    width: 80%; }
-    @media only screen and (max-width: 30em) {
-      footer img {
-        width: 100%; } }
-  @media only screen and (max-width: 30em) {
-    footer ul {
-      margin-bottom: 2rem; } }
-  footer ul h6 {
-    position: relative; }
-    footer ul h6:after {
-      content: '';
-      width: 45%;
-      position: absolute;
-      left: 0;
-      bottom: -0.2rem;
-      border-width: 0 0 0.2rem;
-      border-style: dashed; }
-  footer ul li {
-    list-style-type: disc;
-    padding: 0.4rem 0; }
-    footer ul li:nth-child(2) {
-      margin-top: 1.5rem; }
-      @media only screen and (max-width: 30em) {
-        footer ul li:nth-child(2) {
-          margin-top: 1rem; } }
+    justify-content: space-between; }
+    header .contact-info a {
+      color: #FAF8F1;
+      padding-right: 0.5rem; }
+      header .contact-info a:hover {
+        color: #5b8068; }
+  header .navbar {
+    background-color: #000;
+    border-top: #FAF8F1 solid 0.1rem;
+    border-bottom: #FAF8F1 solid 0.1rem;
+    width: 100% !important; }
+    header .navbar-item {
+      color: #FAF8F1;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem; }
+      header .navbar-item:hover {
+        color: #FAF8F1 !important; }
+    header .navbar .navbar-brand h1 span {
+      color: #5b8068; }
+    header .navbar .navbar-end a {
+      margin: 0 0.5rem; }
+      header .navbar .navbar-end a:hover {
+        text-decoration: underline;
+        background-color: #5b8068 !important; }
+    header .navbar .navbar-end .button {
+      background-color: #5b8068;
+      color: #FAF8F1; }
+      header .navbar .navbar-end .button:hover {
+        background-color: #466250 !important; }
