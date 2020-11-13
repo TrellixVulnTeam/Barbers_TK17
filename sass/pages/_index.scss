@@ -7,6 +7,17 @@ header{
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include respond(tab-land) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0.4rem;
+            & :not(:last-child){
+                margin-bottom: 0.2rem;
+            }
+            .dash{
+                display: none;
+            }
+        }
         a{
             color: $white;
             padding-right: 0.5rem;
@@ -91,7 +102,6 @@ header{
                 color: $primary-green;
                 font-size: 5rem;
                 text-shadow: $black 0.2rem 0.2rem;
-
             }
         }
         .buttons{
