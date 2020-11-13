@@ -178,6 +178,12 @@ header {
     border-top: #FAF8F1 solid 0.1rem;
     border-bottom: #FAF8F1 solid 0.1rem;
     width: 100% !important; }
+    @media only screen and (max-width: 48em) {
+      header .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
     header .navbar-item {
       color: #FAF8F1;
       text-transform: uppercase;
@@ -185,18 +191,51 @@ header {
       font-size: 1.2rem; }
       header .navbar-item:hover {
         color: #FAF8F1 !important; }
+    header .navbar .navbar-menu {
+      background-color: #000; }
+    @media only screen and (max-width: 48em) {
+      header .navbar .navbar-brand {
+        width: 100%; } }
     header .navbar .navbar-brand h1 span {
-      color: #5b8068; }
+      color: #5b8068;
+      font-weight: bold; }
+    @media only screen and (max-width: 48em) {
+      header .navbar .navbar-brand .burger {
+        color: #FAF8F1;
+        display: flex;
+        justify-content: center;
+        align-self: center; } }
     header .navbar .navbar-end a {
       margin: 0 0.5rem; }
       header .navbar .navbar-end a:hover {
         text-decoration: underline;
         background-color: #5b8068 !important; }
+        @media only screen and (max-width: 48em) {
+          header .navbar .navbar-end a:hover {
+            text-decoration: none; } }
+      @media only screen and (max-width: 48em) {
+        header .navbar .navbar-end a {
+          text-align: center;
+          display: inline-block;
+          width: 100%;
+          margin: 0 0; }
+          header .navbar .navbar-end a:after {
+            content: '';
+            height: 0.1rem;
+            display: block;
+            width: 100%;
+            background: #d9d9dc; } }
     header .navbar .navbar-end .button {
       background-color: #5b8068;
       color: #FAF8F1; }
       header .navbar .navbar-end .button:hover {
         background-color: #466250 !important; }
+      @media only screen and (max-width: 48em) {
+        header .navbar .navbar-end .button {
+          margin-left: auto;
+          margin-right: auto; }
+          header .navbar .navbar-end .button:after {
+            background: none; } }
 
 .header-image {
   background-image: url("../images/hero/image1.jpg");

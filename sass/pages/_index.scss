@@ -34,6 +34,12 @@ header{
         border-top: $white solid 0.1rem;
         border-bottom: $white solid 0.1rem;
         width: 100% !important;
+        @include respond(tab-port) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         &-item{
             color: $white;
             text-transform: uppercase;
@@ -43,11 +49,26 @@ header{
                 color: $white !important;
             }             
         }
+        .navbar-menu{
+            background-color: $black;
+        }
         .navbar-brand{
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
             h1{
                 span{
                     color: $primary-green;
+                    font-weight: bold;
                 }
+            }
+            .burger{
+                @include respond(tab-port) {
+                    color: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;                }
             }
         }
         .navbar-end{
@@ -57,8 +78,23 @@ header{
                 &:hover{
                     text-decoration: underline;
                     background-color: $primary-green !important; 
+                    @include respond(tab-port) {
+                        text-decoration: none;
+                    }
                 }
-
+                @include respond(tab-port) {
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0 0;
+                    &:after{
+                        content: '';
+                        height: 0.1rem;
+                        display: block;
+                        width: 100%;
+                        background: $primary-gray;
+                    }
+                }
             }
             //book an appointment
             .button{
@@ -66,6 +102,13 @@ header{
                 color: $white;
                 &:hover{
                     background-color: darken($color: $primary-green, $amount: 10) !important;
+                }
+                @include respond(tab-port) {
+                    margin-left: auto;
+                    margin-right: auto;
+                    &:after{
+                        background: none;
+                    }
                 }
             }
         }
