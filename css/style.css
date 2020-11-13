@@ -188,3 +188,33 @@ header {
       color: #FAF8F1; }
       header .navbar .navbar-end .button:hover {
         background-color: #466250 !important; }
+
+.header-image {
+  background-image: url("../images/hero/image1.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #999; }
+
+.hero-section .round-border {
+  border-radius: 10rem;
+  border-bottom: 0.2rem solid #FAF8F1; }
+
+.hero-section .hero-body h2 {
+  text-shadow: #000 0.2rem 0.2rem; }
+  .hero-section .hero-body h2 span {
+    color: #5b8068;
+    font-size: 5rem;
+    text-shadow: #000 0.2rem 0.2rem; }
+
+.hero-section .hero-body .buttons a {
+  margin: 0 auto;
+  background-color: #5b8068;
+  color: #FAF8F1;
+  border-radius: 1rem;
+  text-shadow: #000 0.1rem 0.1rem;
+  border: solid #d9d9dc 0.1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase; }
+  .hero-section .hero-body .buttons a:hover {
+    background-color: #466250 !important; }

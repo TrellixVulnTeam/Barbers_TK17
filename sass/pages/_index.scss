@@ -70,3 +70,47 @@ header{
 
 //HEADER ENDS
 
+//hero-section
+.header-image {
+    background-image: url("../images/hero/image1.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+   //  background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}
+.hero-section{
+    .round-border{
+        border-radius: 10rem;
+        border-bottom: 0.2rem solid $white;
+    }
+    .hero-body{
+        h2{
+            text-shadow: $black 0.2rem 0.2rem;
+            span{
+                color: $primary-green;
+                font-size: 5rem;
+                text-shadow: $black 0.2rem 0.2rem;
+
+            }
+        }
+        .buttons{
+            
+            a{
+                margin: 0 auto;
+                background-color: $primary-green;
+                color: $white;
+                border-radius: 1rem;
+                text-shadow: $black 0.1rem 0.1rem;
+                border: solid $primary-gray 0.1rem;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                
+                &:hover{
+                    background-color: darken($color: $primary-green, $amount: 10) !important;
+                }
+            }
+        }
+    }
+}
+//hero-section ENDS
