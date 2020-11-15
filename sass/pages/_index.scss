@@ -129,7 +129,7 @@ header{
     background-image: url("../images/hero/image1.jpg");
     background-position: top center;
     background-repeat: no-repeat;
-   //  background-attachment: fixed;
+     background-attachment: fixed;
     background-size: cover;
     background-color: #999;
 }
@@ -167,3 +167,62 @@ header{
     }
 }
 //hero-section ENDS
+
+//about-section
+.about-section{
+    background-image: url("../images/about/about.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    &-body{
+        color: $white;
+        padding: 15rem 10rem;
+        @include respond(b-phone) {
+            padding: 15rem 1rem;    
+        }
+
+        
+       
+        h2{
+            color: $white;
+            text-shadow: $black 0.2rem 0.2rem;
+            text-transform: uppercase;
+            background-color: rgba(63, 62, 62, 0.836);
+            padding: 1rem;
+            margin-bottom: 3rem !important;
+            border-radius: 10rem;
+            border-bottom: 0.2rem solid $white;
+            @include respond(s-phone) {
+                padding: 0;
+  
+            }
+
+
+            span{
+                color: $primary-green;
+                font-size: 5rem;
+                text-shadow: $black 0.2rem 0.2rem;
+            }
+        }
+        p{
+            margin-bottom: 2rem;
+            text-shadow: $black 0.1rem 0.2rem;
+            background-color: rgba(63, 62, 62, 0.836);
+            border-bottom: 0.2rem solid $white;
+            font-size: 1.5rem;
+            border-radius: 10rem;
+            padding: 2rem 4rem;
+            text-align: center;
+            @include respond(b-phone) {
+                padding: 2rem 1rem;
+
+  
+            }
+
+        }
+        
+    }
+}
+
+//about-section ENDS

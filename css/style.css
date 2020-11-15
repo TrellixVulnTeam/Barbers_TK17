@@ -241,6 +241,7 @@ header {
   background-image: url("../images/hero/image1.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-color: #999; }
 
@@ -266,3 +267,44 @@ header {
   text-transform: uppercase; }
   .hero-section .hero-body .buttons a:hover {
     background-color: #466250 !important; }
+
+.about-section {
+  background-image: url("../images/about/about.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+  .about-section-body {
+    color: #FAF8F1;
+    padding: 15rem 10rem; }
+    @media only screen and (max-width: 30em) {
+      .about-section-body {
+        padding: 15rem 1rem; } }
+    .about-section-body h2 {
+      color: #FAF8F1;
+      text-shadow: #000 0.2rem 0.2rem;
+      text-transform: uppercase;
+      background-color: rgba(63, 62, 62, 0.836);
+      padding: 1rem;
+      margin-bottom: 3rem !important;
+      border-radius: 10rem;
+      border-bottom: 0.2rem solid #FAF8F1; }
+      @media only screen and (max-width: 20em) {
+        .about-section-body h2 {
+          padding: 0; } }
+      .about-section-body h2 span {
+        color: #5b8068;
+        font-size: 5rem;
+        text-shadow: #000 0.2rem 0.2rem; }
+    .about-section-body p {
+      margin-bottom: 2rem;
+      text-shadow: #000 0.1rem 0.2rem;
+      background-color: rgba(63, 62, 62, 0.836);
+      border-bottom: 0.2rem solid #FAF8F1;
+      font-size: 1.5rem;
+      border-radius: 10rem;
+      padding: 2rem 4rem;
+      text-align: center; }
+      @media only screen and (max-width: 30em) {
+        .about-section-body p {
+          padding: 2rem 1rem; } }
