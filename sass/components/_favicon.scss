@@ -1,0 +1,32 @@
+
+
+.fa-mobile, .fa-map, .fa-envelope{
+    color: peru;
+    &:hover{
+        color: lighten($color: peru, $amount: 20);
+    }
+}
+.fa-facebook{
+    color: blue;
+    &:hover{
+        color: lighten($color: blue, $amount: 20);
+    }
+}
+.fa-twitter{
+    color: lightblue;
+    &:hover{
+        color: lighten($color: lightblue, $amount: 10);
+    }
+}
+.fa-instagram{
+    color: lightcoral;
+    &:hover{
+        color: lighten($color: lightcoral, $amount: 10)
+    }
+}
+.fa-pinterest{
+    color: red;
+    &:hover{
+        color: lighten($color: red, $amount: 15)
+    }
+} 

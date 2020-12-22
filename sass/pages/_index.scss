@@ -1,228 +1,326 @@
 
-//HEADER
-header{
+
+header {
     background-color: $black;
-//contact-info    
-    .contact-info{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        @include respond(tab-land) {
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 0.4rem;
-            & :not(:last-child){
-                margin-bottom: 0.2rem;
+
+    .info-section {
+        padding: 0.5rem 0 0 0;
+
+        &--one,
+        &--two,
+        &--three {
+            border-right: solid white 1px;
+            padding-right: 2rem;
+
+            @include respond(tab-port) {
+                border-right: none;
+                margin: 0.5rem 0;
             }
-            .dash{
-                display: none;
-            }
+
+            //respond-ends
         }
-        a{
-            color: $white;
-            padding-right: 0.5rem;
-            &:hover{
-                color: $primary-green;
+
+        //&-- ends
+
+        &--four {
+            margin: 0.5rem 0;
+
+            @include respond(tab-port) {
+                margin-top: 1.5rem;
+
+                a {
+                    padding: 0px 2rem;
+                    @include respond(s-phone) {
+                        padding: 0px 1rem;
+                    }
+                }
             }
-          
+
+            //respond ends
         }
+
+        //--four ends
     }
-//contact-edns        
-//nav
-    .navbar{
+
+    //info-section-ends
+    .navbar {
         background-color: $black;
         border-top: $white solid 0.1rem;
         border-bottom: $white solid 0.1rem;
-        width: 100% !important;
-        @include respond(tab-port) {
+        overflow-y: hidden;
+    }
+
+    //active-list-item.js
+    .active-link{
+        background-color: $primary-green !important;
+    }
+
+     //sticky-nav-onScroll.js
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.781) !important;
+      }
+
+
+    //navbar ends
+    .navbar-brand {
+        .navbar-burger {
+            align-self: center;
+            background-color: rgba(255, 255, 255, 0.103);
+            border-radius: 2rem;
+            -webkit-box-shadow: -2px 1px 42px -14px rgba(255, 255, 255, 1);
+            -moz-box-shadow: -2px 1px 42px -14px rgba(255, 255, 255, 1);
+            box-shadow: -2px 1px 42px -14px rgba(255, 255, 255, 1);
+
+            span {
+                color: $white;
+            }
+        }
+    }
+
+    //navbar-brand ends
+    .navbar-menu {
+        @include respond(tab-land) {
+            text-align: center;
+          }
+        
+
+        @include respond(tab-land) {
+            background-color: rgba(0, 0, 0, 0.562);
+        }
+
+        a {
+            margin-right: 0.7rem;
+        }
+
+        .navbar-end-action-button{
+            align-self: center;    
+        }
+
+        .action-button {
+            padding: 0.5rem 0.5rem;
+            @include respond(tab-land) {
+                margin: 2rem auto;
+                padding: 0 2rem;
+                
+            }
+            @include respond(b-phone) {
+                margin: 2rem auto 3rem auto;
+                padding: 0.2rem 1.5rem;
+            }
+        }
+
+        //navbar-menu-ends
+    }
+}
+
+.hero-section {
+    background: url(../images/hero/image1.jpg) no-repeat fixed;
+    background-position: 50% 18%;
+    height: 100vh;
+    background-size: cover;
+
+    .round-border {
+        border-radius: 10rem;
+        border-bottom: 0.2rem solid #fff;
+        padding: 3rem 5rem;
+
+        @include respond(b-phone) {
+            padding: 3rem 0;
+        }
+    }
+
+    a {
+        border-bottom: 0.2rem solid $white;
+    }
+}
+
+//hero-section ends
+
+.about-section {
+    p {
+        width: 50vw;
+        margin: 0 auto 2rem auto;
+
+        @include respond(tab-land) {
+            width: 70vw;
+        }
+
+        @include respond(b-phone) {
+            width: 86vw;
+        }
+
+        &:last-child {
+            background-color: rgba(255, 166, 0, 0.253);
+            border-radius: 1rem;
+            padding: 0.5rem;
+        }
+    }
+
+    //p ends
+}
+
+//about-section ends
+
+.testimonials {
+    background-image: url(../images/testimonials/testimonials.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center bottom;
+    background-size: cover;
+
+    h2 {
+        margin-top: 2rem;
+        @include respond(tab-land) {
+            margin-top: 10rem;
+        }
+
+        @include respond(b-phone) {
+            margin-top: 7rem;
+        }
+
+        @include respond(b-phone) {
+            margin-top: 3rem;
+        }
+    }
+
+    .carousel {
+        overflow: hidden;
+        margin-top: 2rem;
+
+        @include respond(tab-land) {
+            margin-top: 8rem;
+        }
+
+        @include respond(b-phone) {
+            margin-top: 3rem;
+        }
+
+        @include respond(s-phone) {
+            margin-top: 0;
+        }
+
+        .item-1,
+        .item-2,
+        .item-3,
+        .item-4,
+        .item-5,
+        .item-6,
+        .item-7,
+        .item-8 {
+            width: 40vw;
+            margin: 2rem auto 0 auto;
+            justify-content: center;
+
+            @include respond(tab-land) {
+                width: 60vw;
+            }
+
+            @include respond(b-phone) {
+                width: 80vw;
+            }
+        }
+    }
+}
+
+//testimonials ends
+
+.haircut-section {
+    overflow: hidden;
+
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+//haircut-section ends
+
+.team-section {
+    .card {
+        -webkit-box-shadow: -4px 39px 76px -20px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -4px 39px 76px -20px rgba(0, 0, 0, 0.75);
+        box-shadow: -4px 39px 76px -20px rgba(0, 0, 0, 0.75);
+        border-bottom-right-radius: 3rem;
+        border-bottom-left-radius: 3rem;
+        border: $primary-gray solid 0.2rem;
+    }
+}
+
+//team-section ends
+
+.stats-section {
+    background-image: url(https://images.unsplash.com/photo-1512690459411-b9245aed614b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: cover;
+
+    .level-item div {
+        background-color: rgba(0, 0, 0, 0.747);
+        padding: 1rem;
+        border-radius: 2rem;
+        width: 30ch;
+
+        @include respond(tab-land) {
+            width: 20ch;
+        }
+    }
+}
+
+//book-section ends
+
+.book-section {
+    .book-form {
+        padding: 1rem 7rem 1rem 1rem;
+
+        @include respond(tab-land) {
+            padding: 1rem 1rem 1rem 1rem;
+        }
+
+        button {
+            padding: 1rem;
+            @include respond(b-phone) {
+                padding: 0.8rem;
+            }  
+            @include respond(s-phone) {
+                padding: 1rem;
+            }
+    
+        }
+    }
+    .customer-notice{
+        margin-top: 2.5rem;
+    }
+  
+}
+
+//book-section ends
+
+footer {
+    padding: 3rem 0 1rem 0 !important;
+    justify-content: center;
+    overflow: hidden !important;
+
+    .columns {
+        align-items: center;
+        padding: 0 1rem 0 1rem;
+
+        @include respond(tab-land) {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-        }
-        &-item{
-            color: $white;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 1.2rem;
-            &:hover{
-                color: $white !important;
-            }             
-        }
-        .navbar-menu{
-            background-color: $black;
-        }
-        .navbar-brand{
-            @include respond(tab-port) {
-                width: 100%;
-            }
-
-            h1{
-                span{
-                    color: $primary-green;
-                    font-weight: bold;
-                }
-            }
-            .burger{
-                @include respond(tab-port) {
-                    color: $white;
-                    display: flex;
-                    justify-content: center;
-                    align-self: center;                }
-            }
-        }
-        .navbar-end{
-            //background hover color
-            a{
-                margin: 0 0.5rem;
-                &:hover{
-                    text-decoration: underline;
-                    background-color: $primary-green !important; 
-                    @include respond(tab-port) {
-                        text-decoration: none;
-                    }
-                }
-                @include respond(tab-port) {
-                    text-align: center;
-                    display: inline-block;
-                    width: 100%;
-                    margin: 0 0;
-                    &:after{
-                        content: '';
-                        height: 0.1rem;
-                        display: block;
-                        width: 100%;
-                        background: $primary-gray;
-                    }
-                }
-            }
-            //book an appointment
-            .button{
-                background-color: $primary-green;
-                color: $white;
-                &:hover{
-                    background-color: darken($color: $primary-green, $amount: 10) !important;
-                }
-                @include respond(tab-port) {
-                    margin-left: auto;
-                    margin-right: auto;
-                    &:after{
-                        background: none;
-                    }
-                }
-            }
+            gap: 4rem;
         }
 
-
-     
-        
-    }
-
-//nav ENDS
-    
-}
-
-//HEADER ENDS
-
-//hero-section
-.header-image {
-    background-image: url("../images/hero/image1.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-     background-attachment: fixed;
-    background-size: cover;
-    background-color: #999;
-}
-.hero-section{
-    .round-border{
-        border-radius: 10rem;
-        border-bottom: 0.2rem solid $white;
-    }
-    .hero-body{
-        h2{
-            text-shadow: $black 0.2rem 0.2rem;
-            span{
-                color: $primary-green;
-                font-size: 5rem;
-                text-shadow: $black 0.2rem 0.2rem;
-            }
-        }
-        .buttons{
-            
-            a{
-                margin: 0 auto;
-                background-color: $primary-green;
-                color: $white;
-                border-radius: 1rem;
-                text-shadow: $black 0.1rem 0.1rem;
-                border: solid $primary-gray 0.1rem;
-                font-size: 1.2rem;
-                text-transform: uppercase;
-                
-                &:hover{
-                    background-color: darken($color: $primary-green, $amount: 10) !important;
-                }
-            }
+        &:first-child {
+            padding-bottom: 2.5rem;
+            border-bottom: $primary-gray 0.1rem solid;
         }
     }
 }
-//hero-section ENDS
 
-//about-section
-.about-section{
-    background-image: url("../images/about/about.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    &-body{
-        color: $white;
-        padding: 15rem 10rem;
-        @include respond(b-phone) {
-            padding: 15rem 1rem;    
-        }
-
-        
-       
-        h2{
-            color: $white;
-            text-shadow: $black 0.2rem 0.2rem;
-            text-transform: uppercase;
-            background-color: rgba(63, 62, 62, 0.836);
-            padding: 1rem;
-            margin-bottom: 3rem !important;
-            border-radius: 10rem;
-            border-bottom: 0.2rem solid $white;
-            @include respond(s-phone) {
-                padding: 0;
-  
-            }
-
-
-            span{
-                color: $primary-green;
-                font-size: 5rem;
-                text-shadow: $black 0.2rem 0.2rem;
-            }
-        }
-        p{
-            margin-bottom: 2rem;
-            text-shadow: $black 0.1rem 0.2rem;
-            background-color: rgba(63, 62, 62, 0.836);
-            border-bottom: 0.2rem solid $white;
-            font-size: 1.5rem;
-            border-radius: 10rem;
-            padding: 2rem 4rem;
-            text-align: center;
-            @include respond(b-phone) {
-                padding: 2rem 1rem;
-
-  
-            }
-
-        }
-        
-    }
-}
-
-//about-section ENDS
+//footer ends

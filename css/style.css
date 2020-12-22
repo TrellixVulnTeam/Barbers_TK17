@@ -1,27 +1,5 @@
 @charset "UTF-8";
 /*abstracts*/
-/*Functions allow you to define complex operations on SassScript values that you can re-use throughout 
-your stylesheet. They make it easy to abstract out common formulas and behaviors in a readable way.
-
-Functions are defined using the @function at-rule, which is written:
- @function <name>(<arguments...>) { ... }. A function’s name can be any Sass identifier. 
- It can only contain universal statements, as well as the @return at-rule which indicates the 
- value to use as the result of the function call. Functions are called using the normal CSS 
- function syntax.
-
-SCSS SYNTAX
-@function pow($base, $exponent) {
-  $result: 1;
-  @for $_ from 1 through $exponent {
-    $result: $result * $base;
-  }
-  @return $result;
-}
-
-.sidebar {
-  float: left;
-  margin-left: pow(4, 3) * 1px;
-}*/
 /*
 0 - 320px:      Smaller mobile phones
 320 - 360px:    Medium mobile phones
@@ -44,48 +22,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 /*base*/
-/*div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: relative;
-    animation: myfirst 5s linear 2s infinite alternate;
-  }
-  */
-@keyframes example {
-  0% {
-    background-color: red;
-    left: 0px;
-    top: 0px; }
-  25% {
-    background-color: yellow;
-    left: 200px;
-    top: 0px; }
-  50% {
-    background-color: blue;
-    left: 200px;
-    top: 200px; }
-  75% {
-    background-color: green;
-    left: 0px;
-    top: 200px; }
-  100% {
-    background-color: red;
-    left: 0px;
-    top: 0px; } }
-
-@keyframes arrow {
-  0% {
-    top: 40%; }
-  25% {
-    top: 42.5%; }
-  50% {
-    top: 40%; }
-  75% {
-    top: 42.5%; }
-  100% {
-    top: 40%; } }
-
 *,
 *::after,
 *::before {
@@ -96,7 +32,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 20em) {
     html {
       font-size: 37.5%; } }
@@ -109,6 +46,9 @@ html {
   html body {
     box-sizing: border-box; }
 
+a:active {
+  outline: none !important; }
+
 /*“Web typography” refers to the appearance of all the text on your website. It includes basic 
 CSS text properties like what font to use and whether it should be italic or not, but typography 
 is much more than that. It’s about the space between and around letters, words, and lines. It’s 
@@ -117,194 +57,388 @@ the size of different runs of text in relation to one another, and the history b
 https://www.internetingishard.com/html-and-css/web-typography/
 */
 /* !!!!___ Use % rather than px for all layout-related lenghts (including pictures) ___!!!! */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'IM Fell English', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-transform: uppercase; }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.8rem;
+p,
+li,
+tr {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5rem;
   font-weight: 400;
   padding-bottom: 1rem; }
 
-/*Utility classes are meant to do only one thing, and do it well. They are designed to be simple,
- composable and re-usable, allowing for easy and fast development. While a CSS system based on utility 
- classes alone is not desirable, having a set of utility classes that allow you to quickly put together 
- templates is great.
+h1 {
+  color: #FAF8F1;
+  text-shadow: #5b8068 0.1rem 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
- https://blog.mariano.io/css-utility-classes-how-to-use-them-effectively-d61ee00dad2d
- 
-Common Use Cases
-*I find utility classes really helpful for:
-*Margin/padding
-*Text (colors, size, styles)
-*Common Background Colors
-*Hiding/Showing stuff
-*Display (block, inline-block)
+h2 {
+  color: #000;
+  text-shadow: #5b8068 0.1rem 0.1rem;
+  letter-spacing: 0.1rem;
+  text-align: center; }
 
-Naming utility classes
-To separate utility classes from component classes, it’s good to namespace them. I use the .u- namespace.
-You can also shorthand most properties for faster coding. Here are a couple I use:
-*p/m for margin/padding
-*t/r/l/b for top/right/left/bottom
-*v/h for vertical/horizontal
-*bg for background
-*/
+.color-green {
+  color: #5b8068 !important;
+  text-transform: uppercase;
+  text-shadow: #000 0.1rem 0.1rem;
+  font-weight: bold; }
+
+.color-orange {
+  color: #ea830e !important;
+  text-shadow: #FAF8F1 0.1rem 0.1rem; }
+
+.info-section--one .icon, .info-section--two .icon, .info-section--three .icon {
+  vertical-align: middle; }
+
+.info-section--one a, .info-section--two a, .info-section--three a {
+  color: #d9d9dc; }
+  .info-section--one a:hover, .info-section--two a:hover, .info-section--three a:hover {
+    color: #FAF8F1; }
+
+@media only screen and (max-width: 48em) {
+  .info-section--one, .info-section--two, .info-section--three {
+    line-height: 3.2rem; } }
+
+.navbar-menu .navbar-item {
+  color: #FAF8F1;
+  letter-spacing: 0.2rem; }
+  .navbar-menu .navbar-item:hover {
+    background-color: #5b8068;
+    color: #FAF8F1; }
+
+@media only screen and (max-width: 48em) {
+  .navbar-menu a {
+    line-height: 4.5rem; } }
+
+@media only screen and (max-width: 20em) {
+  .navbar-menu a {
+    line-height: 3rem; } }
+
+.hero-section p {
+  color: #FAF8F1;
+  text-shadow: black 0.1rem 0.1rem; }
+
+.about-section h3 {
+  line-height: 3.5rem; }
+
+.testimonials .carousel {
+  text-align: center;
+  color: #000;
+  letter-spacing: 0.1rem; }
+  @media only screen and (max-width: 20em) {
+    .testimonials .carousel p {
+      font-size: 1.2rem; } }
+
+.stats-section p {
+  color: #FAF8F1;
+  text-shadow: black 0.2rem 0.2rem; }
+
+.book-section button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 15px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 15px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 15px 14px 0px rgba(0, 0, 0, 0.75); }
+  @media only screen and (max-width: 30em) {
+    .book-section button {
+      font-size: 1.1rem; } }
+  @media only screen and (max-width: 20em) {
+    .book-section button {
+      font-size: 0.7rem; } }
+
+.book-section .customer-notice p {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+  color: #000; }
+  .book-section .customer-notice p:first-child {
+    font-size: 1.2rem;
+    color: red;
+    text-decoration: underline;
+    letter-spacing: 0.1rem; }
+
+footer .columns li {
+  font-size: 1rem;
+  color: #d9d9dc;
+  text-align: left;
+  line-height: 1.8rem; }
+
+footer .columns p,
+footer .columns span {
+  color: #FAF8F1;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-shadow: #000 0.1rem 0.1rem; }
+
 /*components*/
-/*layout*/
+.action-button {
+  color: #FAF8F1;
+  background-color: #5b8068;
+  border: none;
+  border-bottom: 0.2rem solid #d9d9dc;
+  border-radius: 20rem !important;
+  padding: 0.8rem 1rem;
+  text-transform: uppercase;
+  text-shadow: #000 0.1rem 0.1rem;
+  letter-spacing: 0.2rem;
+  -webkit-box-shadow: -2px 1px 42px -14px white;
+  -moz-box-shadow: -2px 1px 42px -14px white;
+  box-shadow: -2px 1px 42px -14px white;
+  transition: 1s; }
+  .action-button:hover {
+    background-color: #ea830e !important;
+    color: #000 !important;
+    text-shadow: #FAF8F1 0.1rem 0.1rem;
+    border-bottom: 0.2rem solid #5b8068; }
+
+.fa-mobile, .fa-map, .fa-envelope {
+  color: peru; }
+  .fa-mobile:hover, .fa-map:hover, .fa-envelope:hover {
+    color: #e2b890; }
+
+.fa-facebook {
+  color: blue; }
+  .fa-facebook:hover {
+    color: #6666ff; }
+
+.fa-twitter {
+  color: lightblue; }
+  .fa-twitter:hover {
+    color: #d4ebf2; }
+
+.fa-instagram {
+  color: lightcoral; }
+  .fa-instagram:hover {
+    color: #f5aeae; }
+
+.fa-pinterest {
+  color: red; }
+  .fa-pinterest:hover {
+    color: #ff4d4d; }
+
 /*pages*/
 header {
   background-color: #000; }
-  header .contact-info {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; }
-    @media only screen and (max-width: 64em) {
-      header .contact-info {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0.4rem; }
-        header .contact-info :not(:last-child) {
-          margin-bottom: 0.2rem; }
-        header .contact-info .dash {
-          display: none; } }
-    header .contact-info a {
-      color: #FAF8F1;
-      padding-right: 0.5rem; }
-      header .contact-info a:hover {
-        color: #5b8068; }
+  header .info-section {
+    padding: 0.5rem 0 0 0; }
+    header .info-section--one, header .info-section--two, header .info-section--three {
+      border-right: solid white 1px;
+      padding-right: 2rem; }
+      @media only screen and (max-width: 48em) {
+        header .info-section--one, header .info-section--two, header .info-section--three {
+          border-right: none;
+          margin: 0.5rem 0; } }
+    header .info-section--four {
+      margin: 0.5rem 0; }
+      @media only screen and (max-width: 48em) {
+        header .info-section--four {
+          margin-top: 1.5rem; }
+          header .info-section--four a {
+            padding: 0px 2rem; } }
+    @media only screen and (max-width: 48em) and (max-width: 20em) {
+      header .info-section--four a {
+        padding: 0px 1rem; } }
   header .navbar {
     background-color: #000;
     border-top: #FAF8F1 solid 0.1rem;
     border-bottom: #FAF8F1 solid 0.1rem;
-    width: 100% !important; }
-    @media only screen and (max-width: 48em) {
-      header .navbar {
+    overflow-y: hidden; }
+  header .active-link {
+    background-color: #5b8068 !important; }
+  header .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.781) !important; }
+  header .navbar-brand .navbar-burger {
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0.103);
+    border-radius: 2rem;
+    -webkit-box-shadow: -2px 1px 42px -14px white;
+    -moz-box-shadow: -2px 1px 42px -14px white;
+    box-shadow: -2px 1px 42px -14px white; }
+    header .navbar-brand .navbar-burger span {
+      color: #FAF8F1; }
+  @media only screen and (max-width: 64em) {
+    header .navbar-menu {
+      text-align: center; } }
+  @media only screen and (max-width: 64em) {
+    header .navbar-menu {
+      background-color: rgba(0, 0, 0, 0.562); } }
+  header .navbar-menu a {
+    margin-right: 0.7rem; }
+  header .navbar-menu .navbar-end-action-button {
+    align-self: center; }
+  header .navbar-menu .action-button {
+    padding: 0.5rem 0.5rem; }
+    @media only screen and (max-width: 64em) {
+      header .navbar-menu .action-button {
+        margin: 2rem auto;
+        padding: 0 2rem; } }
+    @media only screen and (max-width: 30em) {
+      header .navbar-menu .action-button {
+        margin: 2rem auto 3rem auto;
+        padding: 0.2rem 1.5rem; } }
+
+.hero-section {
+  background: url(../images/hero/image1.jpg) no-repeat fixed;
+  background-position: 50% 18%;
+  height: 100vh;
+  background-size: cover; }
+  .hero-section .round-border {
+    border-radius: 10rem;
+    border-bottom: 0.2rem solid #fff;
+    padding: 3rem 5rem; }
+    @media only screen and (max-width: 30em) {
+      .hero-section .round-border {
+        padding: 3rem 0; } }
+  .hero-section a {
+    border-bottom: 0.2rem solid #FAF8F1; }
+
+.about-section p {
+  width: 50vw;
+  margin: 0 auto 2rem auto; }
+  @media only screen and (max-width: 64em) {
+    .about-section p {
+      width: 70vw; } }
+  @media only screen and (max-width: 30em) {
+    .about-section p {
+      width: 86vw; } }
+  .about-section p:last-child {
+    background-color: rgba(255, 166, 0, 0.253);
+    border-radius: 1rem;
+    padding: 0.5rem; }
+
+.testimonials {
+  background-image: url(../images/testimonials/testimonials.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: center bottom;
+  background-size: cover; }
+  .testimonials h2 {
+    margin-top: 2rem; }
+    @media only screen and (max-width: 64em) {
+      .testimonials h2 {
+        margin-top: 10rem; } }
+    @media only screen and (max-width: 30em) {
+      .testimonials h2 {
+        margin-top: 7rem; } }
+    @media only screen and (max-width: 30em) {
+      .testimonials h2 {
+        margin-top: 3rem; } }
+  .testimonials .carousel {
+    overflow: hidden;
+    margin-top: 2rem; }
+    @media only screen and (max-width: 64em) {
+      .testimonials .carousel {
+        margin-top: 8rem; } }
+    @media only screen and (max-width: 30em) {
+      .testimonials .carousel {
+        margin-top: 3rem; } }
+    @media only screen and (max-width: 20em) {
+      .testimonials .carousel {
+        margin-top: 0; } }
+    .testimonials .carousel .item-1,
+    .testimonials .carousel .item-2,
+    .testimonials .carousel .item-3,
+    .testimonials .carousel .item-4,
+    .testimonials .carousel .item-5,
+    .testimonials .carousel .item-6,
+    .testimonials .carousel .item-7,
+    .testimonials .carousel .item-8 {
+      width: 40vw;
+      margin: 2rem auto 0 auto;
+      justify-content: center; }
+      @media only screen and (max-width: 64em) {
+        .testimonials .carousel .item-1,
+        .testimonials .carousel .item-2,
+        .testimonials .carousel .item-3,
+        .testimonials .carousel .item-4,
+        .testimonials .carousel .item-5,
+        .testimonials .carousel .item-6,
+        .testimonials .carousel .item-7,
+        .testimonials .carousel .item-8 {
+          width: 60vw; } }
+      @media only screen and (max-width: 30em) {
+        .testimonials .carousel .item-1,
+        .testimonials .carousel .item-2,
+        .testimonials .carousel .item-3,
+        .testimonials .carousel .item-4,
+        .testimonials .carousel .item-5,
+        .testimonials .carousel .item-6,
+        .testimonials .carousel .item-7,
+        .testimonials .carousel .item-8 {
+          width: 80vw; } }
+
+.haircut-section {
+  overflow: hidden; }
+  .haircut-section .columns {
+    display: flex;
+    flex-wrap: wrap; }
+
+.team-section .card {
+  -webkit-box-shadow: -4px 39px 76px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 39px 76px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 39px 76px -20px rgba(0, 0, 0, 0.75);
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border: #d9d9dc solid 0.2rem; }
+
+.stats-section {
+  background-image: url(https://images.unsplash.com/photo-1512690459411-b9245aed614b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: cover; }
+  .stats-section .level-item div {
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 30ch; }
+    @media only screen and (max-width: 64em) {
+      .stats-section .level-item div {
+        width: 20ch; } }
+
+.book-section .book-form {
+  padding: 1rem 7rem 1rem 1rem; }
+  @media only screen and (max-width: 64em) {
+    .book-section .book-form {
+      padding: 1rem 1rem 1rem 1rem; } }
+  .book-section .book-form button {
+    padding: 1rem; }
+    @media only screen and (max-width: 30em) {
+      .book-section .book-form button {
+        padding: 0.8rem; } }
+    @media only screen and (max-width: 20em) {
+      .book-section .book-form button {
+        padding: 1rem; } }
+
+.book-section .customer-notice {
+  margin-top: 2.5rem; }
+
+footer {
+  padding: 3rem 0 1rem 0 !important;
+  justify-content: center;
+  overflow: hidden !important; }
+  footer .columns {
+    align-items: center;
+    padding: 0 1rem 0 1rem; }
+    @media only screen and (max-width: 64em) {
+      footer .columns {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; } }
-    header .navbar-item {
-      color: #FAF8F1;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1.2rem; }
-      header .navbar-item:hover {
-        color: #FAF8F1 !important; }
-    header .navbar .navbar-menu {
-      background-color: #000; }
-    @media only screen and (max-width: 48em) {
-      header .navbar .navbar-brand {
-        width: 100%; } }
-    header .navbar .navbar-brand h1 span {
-      color: #5b8068;
-      font-weight: bold; }
-    @media only screen and (max-width: 48em) {
-      header .navbar .navbar-brand .burger {
-        color: #FAF8F1;
-        display: flex;
-        justify-content: center;
-        align-self: center; } }
-    header .navbar .navbar-end a {
-      margin: 0 0.5rem; }
-      header .navbar .navbar-end a:hover {
-        text-decoration: underline;
-        background-color: #5b8068 !important; }
-        @media only screen and (max-width: 48em) {
-          header .navbar .navbar-end a:hover {
-            text-decoration: none; } }
-      @media only screen and (max-width: 48em) {
-        header .navbar .navbar-end a {
-          text-align: center;
-          display: inline-block;
-          width: 100%;
-          margin: 0 0; }
-          header .navbar .navbar-end a:after {
-            content: '';
-            height: 0.1rem;
-            display: block;
-            width: 100%;
-            background: #d9d9dc; } }
-    header .navbar .navbar-end .button {
-      background-color: #5b8068;
-      color: #FAF8F1; }
-      header .navbar .navbar-end .button:hover {
-        background-color: #466250 !important; }
-      @media only screen and (max-width: 48em) {
-        header .navbar .navbar-end .button {
-          margin-left: auto;
-          margin-right: auto; }
-          header .navbar .navbar-end .button:after {
-            background: none; } }
-
-.header-image {
-  background-image: url("../images/hero/image1.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #999; }
-
-.hero-section .round-border {
-  border-radius: 10rem;
-  border-bottom: 0.2rem solid #FAF8F1; }
-
-.hero-section .hero-body h2 {
-  text-shadow: #000 0.2rem 0.2rem; }
-  .hero-section .hero-body h2 span {
-    color: #5b8068;
-    font-size: 5rem;
-    text-shadow: #000 0.2rem 0.2rem; }
-
-.hero-section .hero-body .buttons a {
-  margin: 0 auto;
-  background-color: #5b8068;
-  color: #FAF8F1;
-  border-radius: 1rem;
-  text-shadow: #000 0.1rem 0.1rem;
-  border: solid #d9d9dc 0.1rem;
-  font-size: 1.2rem;
-  text-transform: uppercase; }
-  .hero-section .hero-body .buttons a:hover {
-    background-color: #466250 !important; }
-
-.about-section {
-  background-image: url("../images/about/about.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; }
-  .about-section-body {
-    color: #FAF8F1;
-    padding: 15rem 10rem; }
-    @media only screen and (max-width: 30em) {
-      .about-section-body {
-        padding: 15rem 1rem; } }
-    .about-section-body h2 {
-      color: #FAF8F1;
-      text-shadow: #000 0.2rem 0.2rem;
-      text-transform: uppercase;
-      background-color: rgba(63, 62, 62, 0.836);
-      padding: 1rem;
-      margin-bottom: 3rem !important;
-      border-radius: 10rem;
-      border-bottom: 0.2rem solid #FAF8F1; }
-      @media only screen and (max-width: 20em) {
-        .about-section-body h2 {
-          padding: 0; } }
-      .about-section-body h2 span {
-        color: #5b8068;
-        font-size: 5rem;
-        text-shadow: #000 0.2rem 0.2rem; }
-    .about-section-body p {
-      margin-bottom: 2rem;
-      text-shadow: #000 0.1rem 0.2rem;
-      background-color: rgba(63, 62, 62, 0.836);
-      border-bottom: 0.2rem solid #FAF8F1;
-      font-size: 1.5rem;
-      border-radius: 10rem;
-      padding: 2rem 4rem;
-      text-align: center; }
-      @media only screen and (max-width: 30em) {
-        .about-section-body p {
-          padding: 2rem 1rem; } }
+        gap: 4rem; } }
+    footer .columns:first-child {
+      padding-bottom: 2.5rem;
+      border-bottom: #d9d9dc 0.1rem solid; }

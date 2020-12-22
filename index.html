@@ -18,6 +18,9 @@
     <script src="https://www.jsdelivr.com/package/npm/bulma"></script>
     <!--Bulma icons-->
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <!--Bulma Carousel-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+
 
 
     <title>Hair We Cut Barbers</title>
@@ -25,98 +28,103 @@
 
 <body>
     <header class="has-shadow">
-        <section class="container contact-info py-1">
-            <div>
-                <a href="#">
-                    <span class="icon is-small">
-                      <i class="fas fa-mobile" aria-hidden="true"></i>
-                    </span>
-                    <span>Call us on: 020 0022 02020</span>
-                  </a>
+        <section
+            class="container info-section pt-2-desktop is-flex-desktop is-justify-content-space-between has-text-centered">
+            <div class="info-section--one">
+                <span class="is-size-5-mobile"><a href="callto: 020 0022 02020" alt="phone number"
+                        title="Calling Button"><i class="fas fa-mobile mr-1" aria-hidden="true"> </i>Call us on: 020
+                        0022 02020</a> </span>
             </div>
-            <span class="dash">|</span>               
-            <div>
-                <a href="#">
-                    <span class="icon is-small">
-                      <i class="fas fa-map" aria-hidden="true"></i>
-                    </span>
-                    <span>12 Address Street, London, E1 6AN</span>
-                  </a>                
-            </div>
-            <span class="dash">|</span>               
-            <div>
-                <a href="#">
-                    <span class="icon is-small">
-                      <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </span>
-                    <span>info@barber.com</span>
-                  </a>
-            </div>
-            
-            <div>
-                |
-                <a href="#">
-                    <span class="icon is-small">
-                      <i class="fab fa-facebook"></i>
-                    </span>
-                  </a>
-                  |
-                  <a href="#">
-                  <span class="icon is-small">
-                      <i class="fab fa-twitter"></i>
-                    </span>
-                  </a>
-                  |
-                  <a href="#">
-                  <span class="icon is-small">
-                      <i class="fab fa-instagram"></i>
-                    </span>
-                  </a>
-                  |
-                  <a href="#">
-                  <span class="icon is-small">
-                      <i class="fab fa-pinterest"></i>
-                    </span>
-                  </a>
-                  |
-            </div>
-        </section>
+            <!--info-section--one ends-->
 
-     
-        <nav class="navbar px-4" role="navigation" aria-label="main navigation">
+            <div class="info-section--two">
+
+                <span class="is-size-5-mobile"> <a href="mailto:info@barber.com" alt="email"
+                        title="Start Composing Email"> <i class="fas fa-envelope" aria-hidden="true"></i>
+                        info@barber.com</a> </span>
+            </div>
+            <!--info-section--two ends-->
+
+            <div class="info-section--three">
+
+                <span class="is-size-5-mobile"> <a
+                        href="https://www.google.com/maps/@51.50809,-0.1302322,17z/data=!3m1!4b1!4m2!7m1!2e1"
+                        target="_blank" rel=“nofollow” alt="barber location" title="Opens Google Map"> <i
+                            class="fas fa-map" aria-hidden="true"></i>
+                        12 Address Street, London, E1 6AN</a> </span>
+            </div>
+            <!--info-section--three ends-->
+
+            <div class="info-section--four">
+                <a href="#" alt="facebook icon" title="Visit Our Facebook Page">
+                    <span class="icon is-small mr-3 is-size-5 is-size-3-mobile ">
+                        <i class="fab fa-facebook"></i>
+                    </span>
+                </a>
+
+                <a href="#" alt="twitter icon" title="Visit Our Twitter Page">
+                    <span class="icon is-small mr-3 is-size-5 is-size-3-mobile">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                </a>
+
+                <a href="#" alt="Instagram icon" title="Visit Our Instagram Page">
+                    <span class="icon is-small mr-3 is-size-5 is-size-3-mobile">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                </a>
+
+                <a href="#" alt="twitter pinterest" title="Visit Our Pinterest Page">
+                    <span class="icon is-small is-size-5 is-size-3-mobile">
+                        <i class="fab fa-pinterest"></i>
+                    </span>
+                </a>
+            </div>
+            <!--info-section--four ends-->
+        </section>
+        <!--info-section ends-->
+
+        <nav id="navbar" class="navbar px-4" role="navigation" aria-label="main navigation" >
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
-                    <h1 class="is-size-3 is-capitalized">Hair<span class="is-size-1">We</span> Cut</h1>
+                    <h1 class="is-size-3 is-capitalized">Hair<span class="is-size-1 color-green">We</span> <span
+                            class="color-orange">Cut</span> </h1>
                 </a>
 
-                <a role="button" class="navbar-burger burger navbar-end" id="burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger burger navbar-end mr-1" id="burger" aria-label="menu"
+                    aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
+            <!--navbar ends-->
 
             <div id="nav-links" class="navbar-menu">
-                <div class="navbar-end">
+                <div class="navbar-end is-family-monospace">
 
-                    <a class="navbar-item " href="#about">
+                    <a class="navbar-item is-size-5 is-size-4-mobile  is-uppercase has-text-weight-semibold "
+                        href="#about">
                         About
                     </a>
 
-                    <a class="navbar-item " href="#">
+                    <a class="navbar-item is-size-5 is-size-4-mobile is-uppercase has-text-weight-semibold"
+                        href="#testimonials">
                         Testimonials
                     </a>
 
-                    <a class="navbar-item " href="#">
+                    <a class="navbar-item is-size-5 is-size-4-mobile is-uppercase has-text-weight-semibold"
+                        href="#services">
                         Services
                     </a>
 
-                    <a class="navbar-item " href="#">
+                    <a class="navbar-item is-size-5 is-size-4-mobile is-uppercase has-text-weight-semibold"
+                        href="#haircuts">
                         Haircuts
                     </a>
 
-                    <a class="navbar-item navbar-item--bghc" href="#">
+                    <a class="navbar-item  is-size-5 is-size-4-mobile is-uppercase has-text-weight-semibold"
+                        href="#team">
                         Team
                     </a>
                 </div>
@@ -124,56 +132,845 @@
 
 
                 <div class="navbar-end">
-                    <div class="navbar-item">
+                    <div class="navbar-end-action-button">
                         <div class="buttons">
-                            <a class="button">
+                            <a href="#book" class="action-button is-size-6 is-size-5-mobile">
                                 <strong>Pre-Book</strong>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--nav-links ends-->
         </nav>
     </header>
-    <main>
 
-        <section class=" hero-section hero is-primary is-fullheight header-image">   
+    <main>
+        <section class=" hero-section hero is-primary is-fullheight header-image">
             <!-- Hero content: will be in the middle -->
             <div class="hero-body container has-text-centered">
-                    <div class="round-border pb-2">
-                    <h2 class="title is-size-1">
-                        BARBERS - Hair <span class="">We</span> Cut
+                <div class="round-border pb-2">
+                    <h2 class="title is-size-2 is-capitalized">
+                        Hair<span class="is-size-1 color-green">We</span><span class="color-orange">Cut</span> - BARBERS
                     </h2>
                     <p class="subtitle is-size-4 pb-3">If You Don’t Look Good, We Don’t Look Good.</p>
-                    <div class="buttons">
-                        <a class="button is-primary p-4">
+                    <div class="buttons is-justify-content-center">
+                        <a href="#book" class="action-button p-4 mb-5 is-size-5 is-size-6-mobile ">
                             <strong>Book an Appointment </strong>
                         </a>
+                    </div>
+                </div>
+            </div>
+            <!--hero-body ends-->
+
+        </section>
+        <!--hero-section ends-->
+
+        <section class="about-section mt-6 mb-6 pt-6 pb-6" id="about">
+            <div class="about-section-body container section has-text-centered">
+                <h2 class="title is-size-2 is-size-3-mobile is-capitalized">
+                    Hair<span class="is-size-1 color-green">We</span><span class="color-orange">Cut</span> Barbers</h2>
+                <h3 class="is-size-3 is-size-3-mobile is-capitalized mt-6 mb-6"> "Is The Home For Today’s Modern Man"</h3>
+                <div>
+                    <p class="pb-3 ">
+                        We ensure that all customers receive quality over quantity, which starts with us having a team
+                        of vastly experienced talented barbers who deliver people to people service with honest advice
+                        and proper barber banter.
+                    </p>
+                    <p class="pb-3">
+                        To that end, we aim to provide a service that will energise our customers, who will enjoy the
+                        experience and be motivated enough to pass on the good word to friends, family and work
+                        colleagues.
+                    </p>
+                    <p class=" is-size-5">
+                        "ALL OUR STORES HAS FULL DRINKS LICENCES SO CUSTOMERS ARE OFFERED A COLD BEER OR A SPIRIT OR A
+                        TEA, COFFEE OR GLASS OF CHILLED WATER."
+                    </p>
+                </div>
+        </section>
+        <!--about-section ends-->
+
+        <section class="testimonials mt-6 mb-6 pt-6 pb-6" id="testimonials">
+            <div>
+                <!-- Start Carousel -->
+                <h2 class="title is-size-2 is-size-3-mobile">testimonials</h2>
+                <div id="carousel-demo" class="carousel">
+                    <div class="item-1">
+                        <!-- Slide Content -->
+                        <p>"Brilliant service, very friendly barber,very clean and tidy shop, plenty of parking.
+                            10/10"</p>
+                    </div>
+                    <div class="item-2">
+                        <!-- Slide Content -->
+                        <p>"Definitely the best barbers around, get a great cut from these guys everytime I go in, come
+                            out feeling fresh. Highly Recomend!"</p>
+                    </div>
+                    <div class="item-3">
+                        <!-- Slide Content -->
+                        <p>"Been coming here since just after they opened. Always a friendly & welcoming with a great
+                            cut. I won't go anywhere else. Emma and her staff are great</p>
+                    </div>
+                    <div class="item-4">
+                        <!-- Slide Content -->
+                        <p>"We dont go anywere else. Always do a good job and treat my 6 year old well"</p>
+                    </div>
+                    <div class="item-5">
+                        <!-- Slide Content -->
+                        <p>"Friendly and talented staff, great prices, brilliant little barbers. Obviously a popular
+                            place as it can get very busy."</p>
+                    </div>
+                    <div class="item-6">
+                        <!-- Slide Content -->
+                        <p>"Great place for a cheap, fast but good quality hair cut. Is popular and can get busy but
+                            they take Thier time and care for a good finish"</p>
+                    </div>
+                    <div class="item-7">
+                        <!-- Slide Content -->
+                        <p>"Quality haircuts, friendly staff at a good price. I travel all the way from East London to
+                            get my hair cut here!"</p>
+                    </div>
+                    <div class="item-8">
+                        <!-- Slide Content -->
+                        <p>"Great Barbers that takes care and attention to detail, decent cut every time!"</p>
+
+                    </div>
+                </div>
+                <!-- End Carousel -->
+            </div>
+        </section>
+        <!--testimonials-section ends-->
+
+        <section class="services-section mt-6 mb-6 pt-6 pb-6" id="services">
+            <div class="services-section-body container section has-text-centered">
+                <h2 class="title is-size-2 is-size-3-mobile">services</h2>
+
+                <div class="tabs is-centered ">
+                    <ul>
+                        <li class="tab is-active" onclick="openTab(event,'Haircut')"><a>CUTS</a></li>
+                        <li class="tab" onclick="openTab(event,'Beard')"><a>SHAVES & BEARDS</a></li>
+                        <li class="tab" onclick="openTab(event,'Facial')"><a>ADDITIONAL SERVICES</a></li>
+                    </ul>
+                </div>
+
+                <div class="container section">
+                    <div id="Haircut" class="content-tab">
+                        <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td>STYLISH HAIRCUT</td>
+                                    <td>£40</td>
+                                </tr>
+                                <tr>
+                                    <td>STANDART HAIRCUT</td>
+                                    <td>£25</td>
+                                </tr>
+                                <tr>
+                                    <td>SKIN FADE</td>
+                                    <td>£28</td>
+                                </tr>
+                                <tr>
+                                    <td>ZERO ALL OVER</td>
+                                    <td>£22</td>
+                                </tr>
+                                <tr>
+                                    <td>SHAPE UP</td>
+                                    <td>£15</td>
+                                </tr>
+                                <tr>
+                                    <td>KIDS (Under 12)</td>
+                                    <td>£8</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div id="Beard" class="content-tab" style="display:none">
+                        <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td>HOT TOWEL SHAVE</td>
+                                    <td>£15</td>
+                                </tr>
+                                <tr>
+                                    <td>TRIMED AND SHAPED UP</td>
+                                    <td>£12</td>
+                                </tr>
+                                <tr>
+                                    <td>FULL SHAVE</td>
+                                    <td>£10</td>
+                                </tr>
+                                <tr>
+                                    <td>ONE GRADE ALL OVER</td>
+                                    <td>£7</td>
+                                </tr>
+                                <tr>
+                                    <td>MUSTACHE SHAVE</td>
+                                    <td>£6</td>
+                                </tr>
+                                <tr>
+                                    <td>BEARD DESIGN</td>
+                                    <td>£22</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="Facial" class="content-tab" style="display:none">
+                        <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <tbody>
+                                <tr>
+                                    <td>THREADING</td>
+                                    <td>£6</td>
+                                </tr>
+                                <tr>
+                                    <td>WASH & FINISH</td>
+                                    <td>£4</td>
+                                </tr>
+                                <tr>
+                                    <td>AIR WAXING</td>
+                                    <td>£5</td>
+                                </tr>
+                                <tr>
+                                    <td>FACEMASK</td>
+                                    <td>£5</td>
+                                </tr>
+                                <tr>
+                                    <td>CONSULTATION</td>
+                                    <td>£5</td>
+                                </tr>
+                                <tr>
+                                    <td>HAIR COLOURING</td>
+                                    <td>£20</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!--services-section ends-->
+
+        <section class="haircut-section mt-6 mb-6 pt-6 pb-6 has-background-black" id="haircuts">
+            <div class="haircut-section-body has-text-centered">
+                <h2 class="title is-size-2 is-size-3-mobile is-primary">Haircuts</h2>
+
+                <div class="columns">
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image ">
+                            <img class="is-rounded"
+                                src="https://ath2.unileverservices.com/wp-content/uploads/sites/4/2017/12/high-and-tight-ig-kevinluchmun.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image ">
+                            <img class="is-rounded"
+                                src="https://haircutinspiration.com/wp-content/uploads/Disconnected-Fade.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://www.menshairstyletrends.com/wp-content/uploads/2019/09/moohammad_hamze-cool-short-fringe-hairstyles-for-men.jpg"
+                                alt="">
+                    </div>
+
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+
+                            <img class="is-rounded"
+                                src="https://davidyoull.co.uk/wp-content/uploads/sites/347/nggallery/mens-hair-cuts-styles-with-the-best-barbers-in-paignton-devon/25.jpg"
+                                alt="">
+
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://www.bosshunting.com.au/wp-content/uploads/2020/03/Mens-Short-Comb-Over.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://www.hairdressersstokeontrent.co.uk/wp-content/uploads/2015/07/basement-hair-salon-hanley-stoke-on-trent-hairdressers-hairdressing-barbers-Staffordshire-gents-male-mens-shave-1.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://i.pinimg.com/originals/7f/de/c4/7fdec4a1d2912ebb9d004b74b4aef1b9.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://www.woman24.net/wp-content/uploads/2019/03/Men-Hair-Styles.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://i.pinimg.com/originals/93/7c/de/937cded8c7a9a5e946dffe0858f88859.jpg"
+                                alt="">
+                    </div>
+                    </figure>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://i.pinimg.com/originals/c8/27/c1/c827c16143062e2d4a3ed357755e1f29.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded" src="https://i.dmarge.com/2017/01/Mens-Short-Hair-12-of-45.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://i.pinimg.com/originals/9e/34/e5/9e34e5698fc296e07e1cf995827741d7.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://www.hairministry.co.uk/wp-content/blogs.dir/134/files/gents-hair/2c-gents-homepage-box.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://www.menshairstyletrends.com/wp-content/uploads/2018/05/rafaxhair-slicked-back-hair-taper-fade-haircut-for-men-768x960.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://i.pinimg.com/564x/34/b5/74/34b57417e5ba646bbe6673b617b834f3.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://davidyoull.co.uk/wp-content/uploads/sites/347/nggallery/mens-hair-cuts-styles-with-the-best-barbers-in-paignton-devon/23.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://i.pinimg.com/originals/e0/b7/ec/e0b7ecf629cbf5904c2d837697ecd470.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column is-2 is-4-mobile">
+                        <figure class="image">
+                            <img class="is-rounded"
+                                src="https://i.pinimg.com/originals/d9/03/33/d903331c6d9053422bc6da152c733832.jpg"
+                                alt="">
+                        </figure>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+        <!--hairctus-section ends-->
+
+        <section class="team-section mt-6 mb-6 pt-6 pb-6" id="team">
+            <div class="team-section-body container section has-text-centered">
+                <h2 class="title is-size-2 is-size-3-mobile">meet the team</h2>
+                <div class="container section">
+                    <div class="columns">
+                        <div class="column is-3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-5by4">
+                                        <img src="https://nypost.com/wp-content/uploads/sites/2/2015/06/barber_mendoza1a.jpg?quality=80&strip=all"
+                                            alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img src="https://www.thetottenhamindependent.co.uk/resources/images/2500195.png?type=display"
+                                                    alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">John Smith</p>
+                                            <p class="subtitle is-6">@johnsmith</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@barber</a>.
+                                        <a href="#">#8 year experience</a> <a href="#">#Certificate approved</a>
+                                        <br>
+                                        <time datetime="2016-1-1">Joined: 4 April 2013</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-5by4">
+                                        <img src="https://www.swindonadvertiser.co.uk/resources/images/9583825/"
+                                            alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png"
+                                                    alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">David Cole</p>
+                                            <p class="subtitle is-6">@davecole</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@barber</a>.
+                                        <a href="#">#12 year experience</a> <a href="#">#Certificate approved</a>
+                                        <br>
+                                        <time datetime="2016-1-1">Joined: 1 Jan 2016</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-5by4">
+                                        <img src="https://haircutharry.com/wp-content/uploads/2019/04/Pappys-Barber-Shop-7-1024x819.jpg"
+                                            alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img src="https://m0.joe.co.uk/wp-content/uploads/2016/08/24134933/chelsea.png"
+                                                    alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">Nick Poke</p>
+                                            <p class="subtitle is-6">@nickpoke</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@barber</a>.
+                                        <a href="#">#24 year experience</a> <a href="#">#Certificate approved</a>
+                                        <br>
+                                        <time datetime="2016-1-1">Joined: 1 June 1997</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-5by4">
+                                        <img src="https://us-east-1.linodeobjects.com/gunaxin/2010/05/Sweeney-Todd-560x357.jpg"
+                                            alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img src="https://m0.joe.co.uk/wp-content/uploads/2016/08/24135102/manutd.png"
+                                                    alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">Mat Sprout</p>
+                                            <p class="subtitle is-6">@matsprout</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@barber</a>.
+                                        <a href="#">#3 year experience</a> <a href="#">#Certificate approved</a>
+                                        <br>
+                                        <time datetime="2016-1-1">Joined: 23 June 2018</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!--team-section ends-->
+
+        <section class="stats-section has-background-black">
+            <div class="container section">
+                <div class="columns">
+                    <div class="column">
+                        <nav class="level">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading is-size-4">Cuts</p>
+                                    <p class="title">12,456</p>
+                                </div>
+                            </div>
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading is-size-4">Shaves</p>
+                                    <p class="title">15,456</p>
+                                </div>
+                            </div>
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading is-size-4">Customers</p>
+                                    <p class="title">18,132</p>
+                                </div>
+                            </div>
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading is-size-4">Satisfied</p>
+                                    <p class="title">18,132</p>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>
 
         </section>
 
-        <section class="about-section" id="about">
-            <div class="about-section-body container">
-                <h2 class="title is-size-1 has-text-centered">
-                    Hair<span>We</span> Cut BARBERS <br> Is The Home For Today’s Modern Man</h2>
-                <p>
-                    We ensure that all customers receive quality over quantity, which starts with us having a team of vastly experienced talented barbers who deliver people to people service with honest advice and proper barber banter.
-                </p>
-                <p>
-                    To that end, we aim to provide a service that will energise our customers, who will enjoy the experience and be motivated enough to pass on the good word to friends, family and work colleagues.
-                </p>
-                <p>
-                    "ALL OUR STORES HAS FULL DRINKS LICENCES SO CUSTOMERS ARE OFFERED A COLD BEER OR A SPIRIT OR A TEA, COFFEE OR GLASS OF CHILLED WATER."     
-                </p>
+        <section class="book-section mt-6 mb-6 pt-6 pb-6 " id="book">
+            <div div class="book-section-body container section ">
+                <h2 class="title is-size-2 is-size-3-mobile has-text-centered">book an appointment</h2>
+
+                <div class="book-form">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">From</label>
+                        </div>
+
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left">
+                                    <input class="input" type="text" placeholder="Name">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left has-icons-right">
+                                    <input class="input is-success" type="email" placeholder="Email"
+                                        value="your@email.com">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label"></div>
+                        <div class="field-body">
+                            <div class="field is-expanded">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">
+                                            +44
+                                        </a>
+                                    </p>
+                                    <p class="control is-expanded">
+                                        <input class="input" type="tel" placeholder="Your phone number">
+                                    </p>
+                                </div>
+                                <p class="help">Do not enter the first zero</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Barber</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select>
+                                            <option>John</option>
+                                            <option>David</option>
+                                            <option>Nick</option>
+                                            <option>Mat</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Service</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="member">
+                                        CUT
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="member">
+                                        SHAVE & BEARD
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="member">
+                                        ADDITIONAL SERVICE
+                                    </label>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Specify Service </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-danger" type="text"
+                                        placeholder="e.g. Stylish haircut & full shave">
+                                </div>
+                                <p class="help is-danger">
+                                    This field is required
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="columns field is-horizontal ">
+                        <div class="column is-3">
+
+                        </div>
+                        <div class="column is-3">
+                            <div class="control">
+                                <div class="select">
+                                    <select class="is-focused">
+                                        <option>Select Month</option>
+                                        <option>January</option>
+                                        <option>February</option>
+                                        <option>March</option>
+                                        <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>Novermber</option>
+                                        <option>December</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="control">
+                                <div class="select">
+                                    <select class="is-focused">
+                                        <option>Select Date</option>
+                                        <option>1st</option>
+                                        <option>2nd</option>
+                                        <option>3rd</option>
+                                        <option>4th</option>
+                                        <option>5th</option>
+                                        <option>6th</option>
+                                        <option>7th</option>
+                                        <option>8th</option>
+                                        <option>9th</option>
+                                        <option>10th</option>
+                                        <option>11th</option>
+                                        <option>12th</option>
+                                        <option>13th</option>
+                                        <option>14th</option>
+                                        <option>15th</option>
+                                        <option>16th</option>
+                                        <option>17th</option>
+                                        <option>18th</option>
+                                        <option>19th</option>
+                                        <option>20th</option>
+                                        <option>21st</option>
+                                        <option>22nd</option>
+                                        <option>23rd</option>
+                                        <option>24th</option>
+                                        <option>25th</option>
+                                        <option>26th</option>
+                                        <option>27th</option>
+                                        <option>28th</option>
+                                        <option>29th</option>
+                                        <option>30th</option>
+                                        <option>31st</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="control">
+                                <div class="select">
+                                    <select class="is-focused">
+                                        <option>Select Time</option>
+                                        <option>09:00am</option>
+                                        <option>10:00am</option>
+                                        <option>11:00am</option>
+                                        <option>12:00pm</option>
+                                        <option>13:00pm</option>
+                                        <option>14:00pm</option>
+                                        <option>15:00pm</option>
+                                        <option>16:00pm</option>
+                                        <option>17:00pm</option>
+                                        <option>18:00pm</option>
+                                        <option>19:00pm</option>
+                                        <option>20:00pm</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="field is-horizontal section">
+                        <div class="field-label">
+                            <!-- Left empty for spacing -->
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-success is-uppercase action-button">
+                                        Book an Appointment
+                                    </button>
+                                    <div class="customer-notice">
+                                        <p>CUSTOMER NOTICE</p>
+                                        <p>Incase the appointment time is not available we gonna email you back with the alternative..</p>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             </div>
         </section>
+        <!--book-section ends-->
+
+
+        <footer class="footer mt-6  pt-6 has-background-black" id="footer">
+            <div class="footer-body has-text-centered">
+                <div class="columns">
+                    <div class="column">
+                        <figure class="image is-128x128">
+                            <p></p>
+                            <img src="https://i.pinimg.com/originals/69/6b/8b/696b8b8aa775971c56533fca526c879f.png">
+                        </figure>
+                    </div>
+                    <div class="column">
+
+                        <figure class="image is-128x128">
+                            <p>Guarantee</p>
+                            <img src="https://cdn.pixabay.com/photo/2017/03/01/18/06/satisfaction-guarantee-2109235_960_720.png"
+                                alt="">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-128x128">
+                            <p>Map</p>
+                            <img class="is-rounded"
+                                src="https://www.google.com/maps/d/thumbnail?mid=1jzQ0F21u1PJI_8BqWOAaSkFLHSM" alt="">
+
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <div class="content">
+                                <ul class="is-lower-alpha">
+                                    <li><span>Telephone:</span> 020 13123 31234</li>
+                                    <li><span>Email:</span> Info@hairwecut.co.uk</li>
+                                    <li><span>Address:</span> 17 Trafegare Square</li>
+                                    <li>London, United Kingdom</li>
+                                    <li><span>Post Code:</span> IG11 3PP</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <div class="column">
+                        <p class="is-size-7 is is-center">Hair<span class="color-green">We</span><span
+                                class="color-orange">Cut</span> 2000 / 2021 - All © Copyright Reserved.</p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!--footer ends-->
+    </main>
+
 
     </main>
 
+
+
+    <script src="./js/active-list-item.js"></script>
+    <script src="./js/sticky-nav-onScroll.js"> </script>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/service-section.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="./js/testimonial-carousel.js"></script>
+
 
 </body>
 
